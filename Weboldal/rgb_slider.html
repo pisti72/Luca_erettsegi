@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #808000;
+            background-color: rgb(128, 128, 128);
+        }
+
+        #letter {
+            font-size: 100px;
+            color: black;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Első szintű fejléc</h1>
+    <h2>Első szintű fejléc</h2>
+    <h3>Első szintű fejléc</h3>
+    <p>Ez egy bekezdés.</p>
+    <p>Ez itt <b>félkövér</b>, aztán <i>dőlt</i>, <u>aláhúzott.</u></p>
+
+    <input type="range" min="0" max="255" value="128" id="sliderRed" oninput="updateMezo()">
+    <input type="range" min="0" max="255" value="128" id="sliderGreen" oninput="updateMezo()">
+    <input type="range" min="0" max="255" value="128" id="sliderBlue" oninput="updateMezo()">
+    <input type="range" min="0" max="255" value="0" id="sliderLetter" oninput="updateMezo()">
+
+    <p id="mezo">Ide olvasom az értékét</p>
+    <div id="letter">Pisti</div>
+    <script>
+        var mezo = document.getElementById("mezo")
+        var letter = document.getElementById("letter")
+
+        function updateMezo() {
+            var sliderRed = document.getElementById("sliderRed").value
+            var sliderGreen = document.getElementById("sliderGreen").value
+            var sliderBlue = document.getElementById("sliderBlue").value
+            var érték = sliderRed + "," + sliderGreen + "," + sliderBlue
+            mezo.innerHTML = érték
+            var color = "rgb(" + érték + ")"
+            document.body.style.backgroundColor = color
+
+            //--------
+
+            var sliderLetter = document.getElementById("sliderLetter").value
+            letter.style.top = sliderLetter + "px"
+            letter.style.left = sliderLetter + "px"
+        }
+
+    </script>
+</body>
+
+</html>
