@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="297mm"
+   height="210mm"
+   viewBox="0 0 297 210"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.4.2 (ebf0e940d0, 2025-05-08)"
+   sodipodi:docname="flappy_birds_all.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#13fff7"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="0.65210438"
+     inkscape:cx="127.28024"
+     inkscape:cy="372.63973"
+     inkscape:window-width="1536"
+     inkscape:window-height="795"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       id="cloud"
+       transform="translate(-36.516393,5.6803279)"
+       inkscape:export-filename="cloud.svg"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96">
+      <ellipse
+         style="fill:#f9f9f9;stroke:#999999;stroke-width:1.10999;stroke-dasharray:none"
+         id="path13"
+         cx="125.37296"
+         cy="19.881147"
+         rx="40.113033"
+         ry="18.203199" />
+      <ellipse
+         style="fill:#f9f9f9;stroke:#999999;stroke-width:0.79339;stroke-dasharray:none"
+         id="path11"
+         cx="96.971306"
+         cy="30.430328"
+         rx="32.156582"
+         ry="13.492648" />
+      <ellipse
+         style="fill:#f9f9f9;stroke:#999999;stroke-width:0.966039;stroke-dasharray:none"
+         id="path12"
+         cx="146.87704"
+         cy="36.516396"
+         rx="43.836651"
+         ry="12.189112" />
+    </g>
+    <g
+       id="bird_up"
+       inkscape:export-filename="bird_up.svg"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96">
+      <ellipse
+         style="fill:#ff0000;stroke:#24221c;stroke-width:0.640667;stroke-dasharray:none"
+         id="path1"
+         cx="28.158436"
+         cy="100.2124"
+         rx="18.13582"
+         ry="13.78356"
+         transform="rotate(-12.234726)" />
+      <ellipse
+         style="fill:#ffe680;stroke:#24221c;stroke-width:0.641341;stroke-dasharray:none"
+         id="ellipse2"
+         cx="60.998268"
+         cy="87.6577"
+         rx="10.530647"
+         ry="3.3613014"
+         transform="matrix(0.99948556,0.03207211,0.03273289,0.99946414,0,0)" />
+      <ellipse
+         style="fill:#fe87ff;fill-opacity:1;stroke:#24221c;stroke-width:0.834066;stroke-dasharray:none"
+         id="ellipse3"
+         cx="4.9466028"
+         cy="104.42393"
+         rx="11.9778"
+         ry="4.9981642"
+         transform="matrix(0.89779419,-0.44041525,0.31130204,0.95031102,0,0)" />
+      <ellipse
+         style="fill:#f9f9f9;stroke:#24221c;stroke-width:0.640667;stroke-dasharray:none"
+         id="path3"
+         cx="33.545765"
+         cy="89.703575"
+         transform="rotate(-12.234726)"
+         rx="5.1380773"
+         ry="6.0169401" />
+      <ellipse
+         style="fill:#4d4d4d;stroke:#24221c;stroke-width:0.640667;stroke-dasharray:none"
+         id="path4"
+         cx="35.28677"
+         cy="90.449486"
+         transform="rotate(-12.234726)"
+         rx="1.7834649"
+         ry="2.0885248" />
+      <ellipse
+         style="fill:#ffe680;stroke:#24221c;stroke-width:0.641058;stroke-dasharray:none"
+         id="path2"
+         cx="30.080547"
+         cy="101.89687"
+         rx="10.494272"
+         ry="3.3699827"
+         transform="matrix(0.92157365,-0.38820356,0.34221151,0.93962295,0,0)" />
+      <path
+         style="fill:none;fill-opacity:1;stroke:#24221c;stroke-width:1.565;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
+         d="m 44.326031,77.176067 c 0,0 2.295199,-8.033197 8.893897,-5.451097"
+         id="path5" />
+    </g>
+    <g
+       id="bird_down"
+       transform="rotate(44.132958,-6.147654,112.02789)"
+       inkscape:export-filename="bird_down.svg"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96">
+      <ellipse
+         style="fill:#ff0000;stroke:#24221c;stroke-width:0.640667;stroke-dasharray:none"
+         id="ellipse5"
+         cx="28.158436"
+         cy="100.2124"
+         rx="18.13582"
+         ry="13.78356"
+         transform="rotate(-12.234726)" />
+      <ellipse
+         style="fill:#ffe680;stroke:#24221c;stroke-width:0.641341;stroke-dasharray:none"
+         id="ellipse6"
+         cx="60.998268"
+         cy="87.6577"
+         rx="10.530647"
+         ry="3.3613014"
+         transform="matrix(0.99948556,0.03207211,0.03273289,0.99946414,0,0)" />
+      <ellipse
+         style="fill:#fe87ff;fill-opacity:1;stroke:#24221c;stroke-width:0.834066;stroke-dasharray:none"
+         id="ellipse7"
+         cx="4.9466028"
+         cy="104.42393"
+         rx="11.9778"
+         ry="4.9981642"
+         transform="matrix(0.89779419,-0.44041525,0.31130204,0.95031102,0,0)" />
+      <ellipse
+         style="fill:#f9f9f9;stroke:#24221c;stroke-width:0.640667;stroke-dasharray:none"
+         id="ellipse8"
+         cx="33.545765"
+         cy="89.703575"
+         transform="rotate(-12.234726)"
+         rx="5.1380773"
+         ry="6.0169401" />
+      <ellipse
+         style="fill:#4d4d4d;stroke:#24221c;stroke-width:0.640667;stroke-dasharray:none"
+         id="ellipse9"
+         cx="35.28677"
+         cy="90.449486"
+         transform="rotate(-12.234726)"
+         rx="1.7834649"
+         ry="2.0885248" />
+      <ellipse
+         style="fill:#ffe680;stroke:#24221c;stroke-width:0.641058;stroke-dasharray:none"
+         id="ellipse10"
+         cx="30.080547"
+         cy="101.89687"
+         rx="10.494272"
+         ry="3.3699827"
+         transform="matrix(0.92157365,-0.38820356,0.34221151,0.93962295,0,0)" />
+      <path
+         style="fill:none;fill-opacity:1;stroke:#24221c;stroke-width:1.565;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
+         d="m 44.326031,77.176067 c 0,0 2.295199,-8.033197 8.893897,-5.451097"
+         id="path10" />
+    </g>
+    <g
+       id="pipe"
+       inkscape:export-filename="pipe.svg"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96">
+      <rect
+         style="fill:#008000;stroke:#24221c;stroke-width:1;stroke-dasharray:none"
+         id="rect13"
+         width="37.870789"
+         height="191.36223"
+         x="107.90814"
+         y="110.365"
+         ry="6.6999998" />
+      <rect
+         style="fill:#00ff00;stroke:none;stroke-width:1;stroke-dasharray:none"
+         id="rect14"
+         width="8.3200951"
+         height="181.32074"
+         x="111.06404"
+         y="115.52918"
+         ry="3.8731482" />
+      <rect
+         style="fill:#daffda;fill-opacity:1;stroke:none;stroke-width:0.910995;stroke-dasharray:none"
+         id="rect11"
+         width="4.0166016"
+         height="180.3851"
+         x="112.21164"
+         y="113.95124"
+         ry="2.0082989" />
+      <rect
+         style="fill:#008000;stroke:#24221c;stroke-width:1;stroke-dasharray:none"
+         id="rect15"
+         width="55.945477"
+         height="26.681688"
+         x="99.014244"
+         y="92.003395"
+         ry="6.6999998" />
+      <rect
+         style="fill:#00ff00;stroke:none;stroke-width:1;stroke-dasharray:none"
+         id="rect16"
+         width="7.7462964"
+         height="20.656792"
+         x="103.89154"
+         y="95.159294"
+         ry="3.8731482" />
+      <rect
+         style="fill:#daffda;fill-opacity:1;stroke:none;stroke-width:0.629007;stroke-dasharray:none"
+         id="rect10"
+         width="4.0165977"
+         height="15.762"
+         x="104.89569"
+         y="96.880699"
+         ry="2.9553742" />
+    </g>
+  </g>
+</svg>

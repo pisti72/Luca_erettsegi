@@ -1,0 +1,12 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #70c5ce;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+}
+.cloud{
+    position: absolute;
+    width: 300px;
+    height: auto;
+}
