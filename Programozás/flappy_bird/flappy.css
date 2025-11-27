@@ -5,8 +5,29 @@ body {
     font-family: Arial, sans-serif;
     overflow: hidden;
 }
-.cloud{
+
+.cloud {
     position: absolute;
     width: 300px;
     height: auto;
+}
+
+#bird {
+    position: absolute;
+    width: 200px;
+    height: auto;
+}
+
+#pipe_bottom {
+    position: absolute;
+    width: 200px;
+    height: auto;
+}
+
+#pipe_top {
+    position: absolute;
+    width: 200px;
+    height: auto;
+    -webkit-transform: scaleY(-1);
+    transform: scaleY(-1);
 }
