@@ -1,0 +1,8 @@
+# MariaDB adatfájlok
+mariadb/
+
+# Docker volumes
+volumes/
+
+# Logok
+*.log

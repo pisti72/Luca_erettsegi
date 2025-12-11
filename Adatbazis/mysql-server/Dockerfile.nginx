@@ -1,0 +1,12 @@
+FROM nginx:alpine
+
+# Nginx alapértelmezett konfigurációjának törlése
+RUN rm /etc/nginx/conf.d/default.conf
+
+# Munkakönyvtár beállítása
+WORKDIR /var/www/html
+
+# Port
+EXPOSE 80
+
+CMD ["nginx", "-g", "daemon off;"]
