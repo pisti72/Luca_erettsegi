@@ -1,4 +1,4 @@
-FROM php:8.2-fpm-alpine
+FROM docker.io/php:8.2-fpm-alpine
 
 # MariaDB/MySQL PDO driver telepítése
 RUN docker-php-ext-install pdo pdo_mysql mysqli

@@ -3,7 +3,7 @@ version: '3.8'
 services:
   # MariaDB adatbázis
   mariadb:
-    image: mariadb:11.2
+    image: docker.io/mariadb:11.2
     container_name: adatbazis-mariadb
     restart: always
     environment:
@@ -21,7 +21,7 @@ services:
 
   # phpMyAdmin webes felület
   phpmyadmin:
-    image: phpmyadmin:5.2
+    image: docker.io/phpmyadmin:5.2
     container_name: adatbazis-phpmyadmin
     restart: always
     environment:
