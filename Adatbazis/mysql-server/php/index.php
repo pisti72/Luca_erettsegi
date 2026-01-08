@@ -10,6 +10,7 @@ try {
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     
     echo "<h1>Adatbázis Kapcsolat Sikeres! ✅</h1>";
+    echo "Öcsém, sikerült kapcsolódni a MariaDB adatbázishoz! 🎉";
     echo "<p>MariaDB verzió: " . $pdo->query('SELECT VERSION()')->fetchColumn() . "</p>";
     
     // Adatbázisok listázása
