@@ -11,10 +11,15 @@ clock = pygame.time.Clock()
 dt = 0
 ball = pygame.image.load("intro_ball.gif")
 ballrect = ball.get_rect()
+running = True
 
-while True:
+while running:
     for event in pygame.event.get():
         if event.type == pygame.QUIT: sys.exit()
+
+    keys = pygame.key.get_pressed()
+    if keys[pygame.K_ESCAPE]:
+        running = False
 
     ballrect = ballrect.move(speed[0] * dt, speed[1] * dt)
     if ballrect.left < 0 or ballrect.right > width:
@@ -26,3 +31,5 @@ while True:
     screen.blit(ball, ballrect)
     pygame.display.flip()
     dt = clock.tick(60) / 1000
+
+sys.exit()
