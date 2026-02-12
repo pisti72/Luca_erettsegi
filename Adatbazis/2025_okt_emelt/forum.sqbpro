@@ -1,7 +1,28 @@
-<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="forum.db" readonly="0" foreign_keys="1" case_sensitive_like="0" temp_store="0" wal_autocheckpoint="1000" synchronous="2"/><attached/><window><main_tabs open="structure browser query pragmas" current="2"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="100"/><column_width id="3" width="1018"/><column_width id="4" width="0"/><expanded_item id="0" parent="1"/><expanded_item id="1" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><table title="hirfolyam" custom_title="0" dock_id="3" table="4,9:mainhirfolyam"/><dock_state state="000000ff00000000fd00000001000000020000000000000000fc0100000003fb000000160064006f0063006b00420072006f00770073006500310100000000ffffffff0000000000000000fb000000160064006f0063006b00420072006f00770073006500320100000000ffffffff0000000000000000fb000000160064006f0063006b00420072006f00770073006500330100000000ffffffff0000012b00ffffff000000000000000000000004000000040000000800000008fc00000000"/><default_encoding codec=""/><browse_table_settings><table schema="main" name="felhasznalo" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_" freeze_columns="0"><sort/><column_widths><column index="1" value="41"/><column index="2" value="97"/><column index="3" value="74"/><column index="4" value="176"/><column index="5" value="76"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="hirfolyam" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_" freeze_columns="0"><sort/><column_widths><column index="1" value="41"/><column index="2" value="84"/><column index="3" value="74"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="uzenet" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_" freeze_columns="0"><sort><column index="3" mode="0"/></sort><column_widths><column index="1" value="41"/><column index="2" value="300"/><column index="3" value="41"/><column index="4" value="41"/><column index="5" value="59"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table></browse_table_settings></tab_browse><tab_sql><sql name="2felelos">SELECT hirfolyam.megnevezes, felhasznalo.veznev, felhasznalo.utonev, felhasznalo.email FROM `hirfolyam` INNER JOIN felhasznalo ON hirfolyam.moderator=felhasznalo.id;
-</sql><sql name="5forgalom">SELECT megnevezes, COUNT(uzenet.id)
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="forum.db" readonly="0" foreign_keys="1" case_sensitive_like="0" temp_store="0" wal_autocheckpoint="1000" synchronous="2"/><attached/><window><main_tabs open="structure browser query pragmas" current="2"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="100"/><column_width id="3" width="1018"/><column_width id="4" width="0"/><expanded_item id="0" parent="1"/><expanded_item id="1" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><table title="felhasznalo" custom_title="0" dock_id="3" table="4,11:mainfelhasznalo"/><dock_state state="000000ff00000000fd0000000100000002000003cd0000029dfc0100000003fb000000160064006f0063006b00420072006f00770073006500310100000000ffffffff0000000000000000fb000000160064006f0063006b00420072006f00770073006500320100000000ffffffff0000000000000000fb000000160064006f0063006b00420072006f00770073006500330100000000000003cd0000014000ffffff000003cd0000000000000004000000040000000800000008fc00000000"/><default_encoding codec=""/><browse_table_settings><table schema="main" name="felhasznalo" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_" freeze_columns="0"><sort/><column_widths><column index="1" value="44"/><column index="2" value="97"/><column index="3" value="74"/><column index="4" value="176"/><column index="5" value="76"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="hirfolyam" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_" freeze_columns="0"><sort/><column_widths><column index="1" value="44"/><column index="2" value="84"/><column index="3" value="74"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="uzenet" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_" freeze_columns="0"><sort><column index="3" mode="0"/></sort><column_widths><column index="1" value="44"/><column index="2" value="300"/><column index="3" value="44"/><column index="4" value="44"/><column index="5" value="59"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table></browse_table_settings></tab_browse><tab_sql><sql name="2felelos">-- 2. Lekérdezés segítségével írassa ki a hírfolyamok megnevezését, valamint a moderátoruk 
+-- vezeték- és utónevét az e-mail-címükkel együtt! (2felelos) 
+
+SELECT hirfolyam.megnevezes, felhasznalo.veznev, felhasznalo.utonev, felhasznalo.email FROM `hirfolyam` INNER JOIN felhasznalo ON hirfolyam.moderator=felhasznalo.id;
+</sql><sql name="3hajtas">-- 3. Az adatbázis a kerékpáros közlekedéssel kapcsolatos fórum adatait tartalmazza. Lekérdezés 
+-- segítségével írassa ki azoknak az üzeneteknek a tartalmát, amelyekben szerepel a „bike”
+-- vagy a „bicikli” szó vagy szórészlet! (3hajtas)
+
+SELECT tartalom
+FROM uzenet
+WHERE tartalom LIKE '%bike%' OR tartalom LIKE '%bicikli%';</sql><sql name="4nevrokon">-- 4. Adja meg lekérdezéssel a névrokon felhasználók vezeték- és utónevét! A névrokonok 
+-- vezeték- és utóneve is azonos, de ők különböző személyek. A listában minden név 
+-- ábécésorrendben jelenjen meg, de csak egyszer! (4nevrokon) 
+
+SELECT veznev, utonev
+FROM felhasznalo
+GROUP BY veznev, utonev
+HAVING COUNT(*)&gt;1
+ORDER BY veznev, utonev;</sql><sql name="5forgalom">-- 5. Készítsen lekérdezést, amely meghatározza, hogy hírfolyamonként hány üzenet érkezett 
+-- a fórumba! A hírfolyamok neve és az üzenetek száma jelenjen meg, utóbbi szerint csökkenő 
+-- sorrendben! (5forgalom)
+
+SELECT hirfolyam.megnevezes, COUNT(uzenet.id)
 FROM uzenet, hirfolyam
-WHERE h_id=hirfolyam.id
+WHERE uzenet.h_id=hirfolyam.id
 GROUP BY hirfolyam.id
 ORDER BY 2 DESC;</sql><sql name="6cimtartalom">SELECT veznev, utonev, tartalom, kuldido
 FROM felhasznalo, uzenet, hirfolyam
@@ -9,15 +30,7 @@ WHERE felhasznalo.id=f_id AND tartalom LIKE CONCAT('%',megnevezes,'%');</sql><sq
 -- a fórumhoz! A többször is hozzászólókat csak egyszer vegye figyelembe!
 -- Select count(SELECT DISTINCT uzenet.f_id FROM uzenet ORDER by uzenet.f_id ASC);
 SELECT count(distinct f_id) AS darab from uzenet
--- SELECT count(*) FROM (SELECT DISTINCT f_id FROM uzenet)</sql><sql name="8inaktivak">-- A fórumnak vannak olyan tagjai, akik már nem aktívak, azaz régóta nem szóltak hozzá.
--- Készítsen lekérdezést, amely meghatározza azoknak a vezeték- és utónevét, akik utoljára
--- 2010 előtt szóltak hozzá, és a vizsgált napon sem küldtek üzenetet! (8inaktivak)
-SELECT felhasznalo.veznev, felhasznalo.utonev, felhasznalo.utolso AS ev 
-FROM felhasznalo
-WHERE felhasznalo.utolso &lt; '2010-01-01' AND
-NOT id IN(SELECT uzenet.f_id FROM uzenet)
-
-</sql><sql name="9elektromos">-- Adja meg lekérdezéssel azoknak a felhasználóknak a vezeték- és utónevét, valamint
+-- SELECT count(*) FROM (SELECT DISTINCT f_id FROM uzenet)</sql><sql name="9elektromos">-- Adja meg lekérdezéssel azoknak a felhasználóknak a vezeték- és utónevét, valamint
 -- üzeneteik számát, akik az „e-bike” hírfolyamban írtak ezen a napon 12:00 és 16:00 óra
 -- között, a határokat is beleszámolva! (9elektromos)
 SELECT felhasznalo.veznev, felhasznalo.utonev, count(*) FROM uzenet, felhasznalo, hirfolyam
@@ -46,4 +59,9 @@ WHERE f_id=(
 	FROM uzenet
 	ORDER BY kuldido
 	LIMIT 1
-	);</sql><current_tab id="6"/></tab_sql></sqlb_project>
+	);</sql><sql name="1_minden">SELECT COUNT(*)
+FROM uzenet, felhasznalo, hirfolyam
+WHERE uzenet.f_id = felhasznalo.id
+AND uzenet.h_id = hirfolyam.id
+AND veznev LIKE 'B%'
+ORDER BY veznev ASC</sql><current_tab id="8"/></tab_sql></sqlb_project>
