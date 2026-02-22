@@ -1,11 +1,28 @@
+body{
+    font-family: 'Times New Roman', Times, serif;
+    /*margin: 0;*/
+}
+
 .tartalom {
+    background-color: #ccc;
+    color: black;
+    width: 700px;
+    margin: 0 auto;
+    padding: 10px;
 }
 
 .forras {
     clear:both;
+    background-color: #757575;
+    color: white;
+    width: 700px;
+    margin: 0 auto;
+    padding: 10px;
 }
 
 p {
+    text-align: justify;
+    padding-left: 20px;
 }
 
 img.elsok {
