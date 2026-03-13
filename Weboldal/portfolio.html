@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfólió</title>
+
+  <!-- Bootstrap 5 CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+
+  <style>
+    :root {
+      --accent: #6c63ff;
+      --accent-dark: #574fd6;
+      --dark: #111827;
+      --card-bg: #1f2937;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background-color: var(--dark);
+      color: #e5e7eb;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    /* ── Navbar ── */
+    .navbar { background-color: rgba(17,24,39,0.95); backdrop-filter: blur(8px); }
+    .navbar-brand span { color: var(--accent); }
+    .nav-link { color: #d1d5db !important; transition: color .2s; }
+    .nav-link:hover { color: var(--accent) !important; }
+
+    /* ── Hero ── */
+    #hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+    }
+    .hero-title { font-size: clamp(2.2rem, 5vw, 4rem); font-weight: 800; }
+    .hero-title .highlight { color: var(--accent); }
+    .hero-sub  { font-size: 1.25rem; color: #9ca3af; }
+    .btn-accent {
+      background-color: var(--accent);
+      border-color: var(--accent);
+      color: #fff;
+      border-radius: 50px;
+      padding: .65rem 2rem;
+      font-weight: 600;
+      transition: background .25s, transform .2s;
+    }
+    .btn-accent:hover { background-color: var(--accent-dark); transform: translateY(-2px); color:#fff; }
+    .btn-outline-accent {
+      border: 2px solid var(--accent);
+      color: var(--accent);
+      border-radius: 50px;
+      padding: .65rem 2rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all .25s;
+    }
+    .btn-outline-accent:hover { background: var(--accent); color: #fff; }
+    .avatar-placeholder {
+      width: 260px; height: 260px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent), #ec4899);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 7rem;
+      color: #fff;
+      margin: 0 auto;
+      box-shadow: 0 0 60px rgba(108,99,255,.4);
+    }
+
+    /* ── Sections ── */
+    section { padding: 90px 0; }
+    .section-title {
+      font-size: 2rem; font-weight: 800;
+      position: relative; display: inline-block; margin-bottom: 3rem;
+    }
+    .section-title::after {
+      content: '';
+      display: block; width: 60px; height: 4px;
+      background: var(--accent);
+      border-radius: 2px;
+      margin-top: 8px;
+    }
+
+    /* ── About ── */
+    #about { background-color: #161d2b; }
+    .about-info li { display: flex; gap: .6rem; margin-bottom: .5rem; color: #9ca3af; }
+    .about-info li strong { color: #e5e7eb; min-width: 80px; }
+
+    /* ── Skills ── */
+    .skill-badge {
+      background-color: var(--card-bg);
+      border: 1px solid #374151;
+      border-radius: 12px;
+      padding: .9rem 1.2rem;
+      text-align: center;
+      transition: border-color .25s, transform .2s;
+    }
+    .skill-badge:hover { border-color: var(--accent); transform: translateY(-3px); }
+    .skill-badge i  { font-size: 2rem; color: var(--accent); }
+    .skill-badge p  { margin: .4rem 0 0; font-size: .85rem; color: #d1d5db; }
+
+    /* ── Projects ── */
+    #projects { background-color: #161d2b; }
+    .project-card {
+      background-color: var(--card-bg);
+      border: 1px solid #374151;
+      border-radius: 16px;
+      padding: 1.6rem;
+      height: 100%;
+      transition: border-color .25s, transform .2s;
+    }
+    .project-card:hover { border-color: var(--accent); transform: translateY(-4px); }
+    .project-card .badge-tag {
+      background-color: rgba(108,99,255,.15);
+      color: var(--accent);
+      border-radius: 50px;
+      font-size: .75rem;
+      padding: .25rem .75rem;
+    }
+    .project-card h5 { color: #f9fafb; font-weight: 700; }
+    .project-card p  { color: #9ca3af; font-size: .9rem; }
+    .project-links a { color: var(--accent); text-decoration: none; font-size: .9rem; font-weight: 600; }
+    .project-links a:hover { text-decoration: underline; }
+
+    /* ── Contact ── */
+    .contact-card {
+      background-color: var(--card-bg);
+      border: 1px solid #374151;
+      border-radius: 16px;
+      padding: 2.5rem;
+    }
+    .form-control, .form-control:focus {
+      background-color: #111827;
+      border-color: #374151;
+      color: #e5e7eb;
+      border-radius: 10px;
+    }
+    .form-control:focus { border-color: var(--accent); box-shadow: 0 0 0 .2rem rgba(108,99,255,.25); }
+    .form-label { color: #9ca3af; font-size: .9rem; }
+
+    /* ── Footer ── */
+    footer {
+      background-color: #0f172a;
+      padding: 2rem 0;
+      text-align: center;
+      color: #4b5563;
+      font-size: .85rem;
+    }
+    footer a { color: #6b7280; text-decoration: none; }
+    footer a:hover { color: var(--accent); }
+
+    /* ── Scroll top button ── */
+    #scrollTop {
+      position: fixed; bottom: 1.5rem; right: 1.5rem;
+      background: var(--accent); color: #fff;
+      border: none; border-radius: 50%;
+      width: 44px; height: 44px;
+      font-size: 1.1rem;
+      display: none; align-items: center; justify-content: center;
+      cursor: pointer; box-shadow: 0 4px 15px rgba(108,99,255,.4);
+      transition: background .2s;
+      z-index: 999;
+    }
+    #scrollTop:hover { background: var(--accent-dark); }
+  </style>
+</head>
+<body>
+
+<!-- ============================================================ NAVBAR -->
+<nav class="navbar navbar-expand-lg fixed-top py-3">
+  <div class="container">
+    <a class="navbar-brand fw-bold fs-4" href="#hero">
+      &lt;<span>Portfólió</span>/&gt;
+    </a>
+    <button class="navbar-toggler border-secondary" type="button"
+            data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <i class="bi bi-list text-light fs-4"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto gap-lg-1">
+        <li class="nav-item"><a class="nav-link" href="#about">Rólam</a></li>
+        <li class="nav-item"><a class="nav-link" href="#skills">Tudásom</a></li>
+        <li class="nav-item"><a class="nav-link" href="#projects">Projektek</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Kapcsolat</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- ============================================================ HERO -->
+<section id="hero">
+  <div class="container">
+    <div class="row align-items-center gy-5">
+      <div class="col-lg-7">
+        <p class="text-uppercase fw-semibold" style="color:var(--accent); letter-spacing:.15em;">Üdvözlöm!</p>
+        <h1 class="hero-title mb-3">
+          Kovács <span class="highlight">Anna</span> vagyok<br>
+          <span style="font-size:clamp(1.4rem,3vw,2.2rem); color:#9ca3af; font-weight:400;">
+            Frontend fejlesztő &amp; UI designer
+          </span>
+        </h1>
+        <p class="hero-sub mb-4">
+          Olyan weboldalakat készítek, amelyek nemcsak jól néznek ki,<br class="d-none d-md-block">
+          hanem kiváló felhasználói élményt is nyújtanak.
+        </p>
+        <div class="d-flex flex-wrap gap-3">
+          <a href="#projects" class="btn-accent btn">Projektjeim</a>
+          <a href="#contact" class="btn-outline-accent">Írj nekem</a>
+        </div>
+      </div>
+      <div class="col-lg-5 text-center">
+        <div class="avatar-placeholder">
+          <i class="bi bi-person-fill"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ ABOUT -->
+<section id="about">
+  <div class="container">
+    <h2 class="section-title">Rólam</h2>
+    <div class="row gy-4 align-items-start">
+      <div class="col-lg-6">
+        <p style="color:#9ca3af; line-height:1.8;">
+          Szenvedélyes webes fejlesztő vagyok, aki imád szép és funkcionális
+          felületeket létrehozni. Folyamatosan tanulok és fejlesztem tudásomat,
+          hogy naprakész maradjak a legújabb technológiákkal.
+        </p>
+        <p style="color:#9ca3af; line-height:1.8;">
+          Szabadidőmben nyílt forráskódú projektekhez járulok hozzá, és UI/UX
+          dizájnnal foglalkozom. Szívesen dolgozom csapatban és önállóan egyaránt.
+        </p>
+      </div>
+      <div class="col-lg-6">
+        <ul class="about-info list-unstyled ms-lg-4">
+          <li><i class="bi bi-person text-accent" style="color:var(--accent)"></i>
+            <strong>Név:</strong> Kovács Anna</li>
+          <li><i class="bi bi-geo-alt" style="color:var(--accent)"></i>
+            <strong>Helyszín:</strong> Budapest, Magyarország</li>
+          <li><i class="bi bi-envelope" style="color:var(--accent)"></i>
+            <strong>Email:</strong> anna@example.com</li>
+          <li><i class="bi bi-briefcase" style="color:var(--accent)"></i>
+            <strong>Státusz:</strong> <span style="color:#4ade80;">Elérhető</span></li>
+          <li><i class="bi bi-translate" style="color:var(--accent)"></i>
+            <strong>Nyelvek:</strong> Magyar, Angol (B2)</li>
+        </ul>
+        <div class="mt-4 d-flex gap-3">
+          <a href="#" class="btn-accent btn btn-sm" download>
+            <i class="bi bi-download me-1"></i>Önéletrajz
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ SKILLS -->
+<section id="skills">
+  <div class="container">
+    <h2 class="section-title">Tudásom</h2>
+    <div class="row g-3">
+      <!-- Sor 1 -->
+      <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+        <div class="skill-badge">
+          <i class="bi bi-filetype-html"></i>
+          <p>HTML5</p>
+        </div>
+      </div>
+      <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+        <div class="skill-badge">
+          <i class="bi bi-filetype-css"></i>
+          <p>CSS3</p>
+        </div>
+      </div>
+      <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+        <div class="skill-badge">
+          <i class="bi bi-filetype-js"></i>
+          <p>JavaScript</p>
+        </div>
+      </div>
+      <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+        <div class="skill-badge">
+          <i class="bi bi-bootstrap-fill"></i>
+          <p>Bootstrap</p>
+        </div>
+      </div>
+      <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+        <div class="skill-badge">
+          <i class="bi bi-filetype-py"></i>
+          <p>Python</p>
+        </div>
+      </div>
+      <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+        <div class="skill-badge">
+          <i class="bi bi-git"></i>
+          <p>Git</p>
+        </div>
+      </div>
+      <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+        <div class="skill-badge">
+          <i class="bi bi-database"></i>
+          <p>SQL</p>
+        </div>
+      </div>
+      <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+        <div class="skill-badge">
+          <i class="bi bi-phone"></i>
+          <p>Reszponzív</p>
+        </div>
+      </div>
+      <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+        <div class="skill-badge">
+          <i class="bi bi-figma"></i>
+          <p>Figma</p>
+        </div>
+      </div>
+      <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+        <div class="skill-badge">
+          <i class="bi bi-box"></i>
+          <p>Docker</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ PROJECTS -->
+<section id="projects">
+  <div class="container">
+    <h2 class="section-title">Projektek</h2>
+    <div class="row g-4">
+
+      <div class="col-md-6 col-lg-4">
+        <div class="project-card">
+          <div class="d-flex flex-wrap gap-2 mb-3">
+            <span class="badge-tag">HTML</span>
+            <span class="badge-tag">CSS</span>
+            <span class="badge-tag">JS</span>
+          </div>
+          <h5>Webáruház frontend</h5>
+          <p>Reszponzív e-kereskedelmi felület kosárkezeléssel és termékszűréssel.</p>
+          <div class="project-links d-flex gap-3 mt-3">
+            <a href="#"><i class="bi bi-github me-1"></i>GitHub</a>
+            <a href="#"><i class="bi bi-box-arrow-up-right me-1"></i>Demo</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="project-card">
+          <div class="d-flex flex-wrap gap-2 mb-3">
+            <span class="badge-tag">Python</span>
+            <span class="badge-tag">SQL</span>
+          </div>
+          <h5>Könyvtárkezelő rendszer</h5>
+          <p>Parancssoros adatbázis-alkalmazás könyvek és kölcsönzések nyilvántartására.</p>
+          <div class="project-links d-flex gap-3 mt-3">
+            <a href="#"><i class="bi bi-github me-1"></i>GitHub</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="project-card">
+          <div class="d-flex flex-wrap gap-2 mb-3">
+            <span class="badge-tag">Bootstrap</span>
+            <span class="badge-tag">JS</span>
+          </div>
+          <h5>Időjárás alkalmazás</h5>
+          <p>OpenWeather API alapú időjárás-megjelenítő, városkeresési funkcióval.</p>
+          <div class="project-links d-flex gap-3 mt-3">
+            <a href="#"><i class="bi bi-github me-1"></i>GitHub</a>
+            <a href="#"><i class="bi bi-box-arrow-up-right me-1"></i>Demo</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="project-card">
+          <div class="d-flex flex-wrap gap-2 mb-3">
+            <span class="badge-tag">HTML</span>
+            <span class="badge-tag">CSS</span>
+          </div>
+          <h5>Portfólió sablon</h5>
+          <p>Letisztult, sötét témájú portfólió oldal – ez amit éppen nézel! 😄</p>
+          <div class="project-links d-flex gap-3 mt-3">
+            <a href="#"><i class="bi bi-github me-1"></i>GitHub</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="project-card">
+          <div class="d-flex flex-wrap gap-2 mb-3">
+            <span class="badge-tag">Python</span>
+            <span class="badge-tag">Pygame</span>
+          </div>
+          <h5>Flappy Bird klón</h5>
+          <p>Klasszikus Flappy Bird játék Python és Pygame segítségével megvalósítva.</p>
+          <div class="project-links d-flex gap-3 mt-3">
+            <a href="#"><i class="bi bi-github me-1"></i>GitHub</a>
+            <a href="#"><i class="bi bi-box-arrow-up-right me-1"></i>Demo</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="project-card">
+          <div class="d-flex flex-wrap gap-2 mb-3">
+            <span class="badge-tag">SQL</span>
+            <span class="badge-tag">PHP</span>
+          </div>
+          <h5>Fórum adatbázis</h5>
+          <p>Relációs adatbázis tervezése és elemzése érettségi feladathoz.</p>
+          <div class="project-links d-flex gap-3 mt-3">
+            <a href="#"><i class="bi bi-github me-1"></i>GitHub</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ CONTACT -->
+<section id="contact">
+  <div class="container">
+    <h2 class="section-title">Kapcsolat</h2>
+    <div class="row justify-content-center">
+      <div class="col-lg-7">
+        <div class="contact-card">
+          <p class="mb-4" style="color:#9ca3af;">
+            Van egy ötleted, projektje, vagy csak szeretnél megismerkedni?
+            Küldj üzenetet, visszajelzek mihamarabb!
+          </p>
+          <form onsubmit="sendMessage(event)">
+            <div class="mb-3">
+              <label class="form-label">Neved</label>
+              <input type="text" class="form-control" placeholder="Gipsz Jakab" required />
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Email cím</label>
+              <input type="email" class="form-control" placeholder="jakab@example.com" required />
+            </div>
+            <div class="mb-4">
+              <label class="form-label">Üzenet</label>
+              <textarea class="form-control" rows="5" placeholder="Üzeneted..." required></textarea>
+            </div>
+            <button type="submit" class="btn-accent btn w-100">
+              <i class="bi bi-send me-2"></i>Küldés
+            </button>
+          </form>
+          <div id="successMsg" class="alert alert-success mt-3 d-none" role="alert">
+            <i class="bi bi-check-circle me-2"></i>Üzenet elküldve! Hamarosan visszajelzek.
+          </div>
+        </div>
+
+        <!-- Közösségi linkek -->
+        <div class="d-flex justify-content-center gap-4 mt-4">
+          <a href="#" class="fs-4" style="color:#9ca3af; transition:color .2s;"
+             onmouseover="this.style.color='var(--accent)'"
+             onmouseout="this.style.color='#9ca3af'">
+            <i class="bi bi-github"></i>
+          </a>
+          <a href="#" class="fs-4" style="color:#9ca3af; transition:color .2s;"
+             onmouseover="this.style.color='var(--accent)'"
+             onmouseout="this.style.color='#9ca3af'">
+            <i class="bi bi-linkedin"></i>
+          </a>
+          <a href="#" class="fs-4" style="color:#9ca3af; transition:color .2s;"
+             onmouseover="this.style.color='var(--accent)'"
+             onmouseout="this.style.color='#9ca3af'">
+            <i class="bi bi-instagram"></i>
+          </a>
+          <a href="mailto:anna@example.com" class="fs-4" style="color:#9ca3af; transition:color .2s;"
+             onmouseover="this.style.color='var(--accent)'"
+             onmouseout="this.style.color='#9ca3af'">
+            <i class="bi bi-envelope-fill"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ FOOTER -->
+<footer>
+  <div class="container">
+    <p class="mb-1">
+      Készítette <a href="#">Kovács Anna</a> &mdash; Bootstrap 5
+    </p>
+    <p class="mb-0">© 2026 – Minden jog fenntartva.</p>
+  </div>
+</footer>
+
+<!-- Scroll to top button -->
+<button id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+  <i class="bi bi-chevron-up"></i>
+</button>
+
+<!-- Bootstrap 5 JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  // Scroll to top megjelenítése
+  window.addEventListener('scroll', () => {
+    const btn = document.getElementById('scrollTop');
+    btn.style.display = window.scrollY > 300 ? 'flex' : 'none';
+  });
+
+  // Navbar aktív link kiemelés görgethezés közben
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.nav-link');
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(s => {
+      if (window.scrollY >= s.offsetTop - 80) current = s.id;
+    });
+    navLinks.forEach(a => {
+      a.style.color = a.getAttribute('href') === '#' + current
+        ? 'var(--accent)' : '';
+    });
+  });
+
+  // Demo "küldés"
+  function sendMessage(e) {
+    e.preventDefault();
+    document.getElementById('successMsg').classList.remove('d-none');
+    e.target.reset();
+    setTimeout(() => {
+      document.getElementById('successMsg').classList.add('d-none');
+    }, 4000);
+  }
+</script>
+</body>
+</html>
