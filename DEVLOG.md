@@ -18,8 +18,8 @@
 2026-02-26  Prog ciklusok
 2026-03-05  ELMARADT
 2026-03-12  Primszámok programozás
-2026-03-19
-2026-03-26
+2026-03-19  2025 május könyvek.py 1-3 feladat
+2026-03-26  2025 május könyvek.py 4,5 feladat
 2026-04-02  TAVASZI SZÜNET
 2026-04-09  TAVASZI SZÜNET
 2026-04-16
