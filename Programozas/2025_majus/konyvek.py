@@ -97,8 +97,6 @@ txt += "</table>"
 file.write(txt)
 file.close()
 
-
-
 print("6. feladat [TBD]")
 
 # 6. feladat: 

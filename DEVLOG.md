@@ -20,8 +20,8 @@
 2026-03-12  Primszámok programozás
 2026-03-19  2025 május könyvek.py 1-3 feladat
 2026-03-26  2025 május könyvek.py 4,5 feladat
-2026-04-02  TAVASZI SZÜNET
-2026-04-09  TAVASZI SZÜNET
+2026-04-03  TAVASZI SZÜNET Remote: Szókitaláló valamelyik emelt érettségiből
+2026-04-10  TAVASZI SZÜNET Remote: Szerencsekerék vagy 2024 május Beléptető rendszer
 2026-04-16
 2026-04-23
 2026-04-30

@@ -1,0 +1,54 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Szerencsekerék</title>
+	<style>
+body{
+	background-color: lightgrey;
+	font: 3em monospace;
+	color: dimgrey;
+}
+input, button{
+	font: 1em monospace;
+}
+	</style>
+</head>
+<body>
+<h1>SZERENCSEKERÉK</h1>
+<p>
+<input type="text" size="1" maxlength="1" id="betu"></input>
+<button onclick="tipp()">Tipp</button>
+</p>
+<p id="valasz"></p>
+<p id="gratula"></p>
+<script src="mondasok.js"></script>
+<script>
+const sorok = mondasok.split(/\r?\n/);
+n = Math.floor(Math.random() * sorok.length)
+mondat = sorok[n]
+console.log(mondat)
+betuk = []
+tipp()
+function tipp(){
+	betuk.push(betu.value.toLowerCase())	//betuk.append(betu.lower())
+	kiir = ""
+	nyert_e = true
+	for(i = 0; i < mondat.length; i++){		//for b in mondat:
+		let b = mondat[i].toLowerCase()
+		if(b == " "){
+			kiir += " "
+		}else if(betuk.includes(b)){ 		//elif b in betuk:
+			kiir += b.toUpperCase()
+		}else{
+			kiir += "#"
+			nyert_e = false
+		}
+	}
+	valasz.innerHTML = kiir
+	betu.value = ""
+	if(nyert_e){
+		gratula.innerHTML = "🏆 GRATULÁLOK!!! 🏆"	
+	}
+}
+</script>
+</html>
