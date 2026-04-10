@@ -23,8 +23,9 @@ input, button{
 <p id="gratula"></p>
 <script src="mondasok.js"></script>
 <script>
-const sorok = mondasok.split(/\r?\n/);
-n = Math.floor(Math.random() * sorok.length)
+const sorok = mondasok.split(/\r?\n/);		// sorok = []
+n = Math.floor(Math.random() * sorok.length)//len(sorok)
+console.log("n=" + n)
 mondat = sorok[n]
 console.log(mondat)
 betuk = []
