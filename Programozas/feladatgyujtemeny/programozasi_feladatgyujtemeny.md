@@ -54,6 +54,19 @@ Szalontai István
 
 Írj olyan programot, amelyik beolvassa a nevedet, majd az életkorodat. Ha például tégedet Péternek hívnak és ha 20 év alatti vagy, akkor úgy köszönt, hogy "Szia Péter!", ha 21 és 40 év közötti vagy akkor "Jó napot Péter!",  ha pedig már 41 éves elmúltál akkor úgy köszönt, hogy "Tiszteletem Péter!".
 
+### 1.b Feladat: Köszöntés és hány éves vagy
+
+Írj egy olyan Python programot, ami bekéri a nevedet, a születési évedet és a mostani évet.
+Majd köszönt téged és kiírja, hogy te hány éves vagy.
+
+Példa a működésre:
+
+Hogy hívnak? Aladár
+Melyik évben születtél? 2008
+Milyen évet írunk most? 2026
+Üdvözöllek Aladár! Te 18 éves vagy.
+
+
 ### 2. Feladat: Számológép
 
 Készíts egy egyszerű számológép programot, amely beolvas két számot, majd megkérdezi a felhasználót, hogy milyen műveletet szeretne elvégezni (+, -, *, /). A program végezze el a kért műveletet és írja ki az eredményt! Osztásnál figyeljen arra, hogy nullával való osztás esetén írjon ki hibaüzenetet!
@@ -104,6 +117,22 @@ else:
 ```
 
 **Megjegyzés:** Figyeljük meg, hogy az életkort `int()`-tel számmá alakítjuk, különben szövegként kezelné a program.
+
+### 1.b Feladat
+
+Ebben a feladatban beolvassuk a nevet, a születési évet és az aktuális évet. Az életkort az aktuális és a születési év különbsége alapján számítjuk ki.
+
+```python
+név = input("Hogy hívnak? ")
+szuletesi_eve = int(input("Melyik évben születtél? "))
+jelenlegi_ev = int(input("Milyen évet írunk most? "))
+
+kor = jelenlegi_ev - szuletesi_eve
+
+print(f"Üdvözöllek {név}! Te {kor} éves vagy.")
+```
+
+**Megjegyzés:** Az éveket `int()`-tel alakítjuk számmá, hogy matematikai műveletet végezhetünk velük. Az f-string formázás `f"..."` szintaxisával egyszerűen beilleszthetjük a változók értékeit a szövegbe.
 
 ### 2. Feladat
 
