@@ -1,0 +1,100 @@
+const mondasok=`A harag rossz tanácsadó
+A könyvek néma mesterek
+A szerelem vak
+Lassan járj tovább érsz
+A szükség a legnagyobb tanítómester
+A tiltott gyümölcs a legédesebb
+Addig jár a korsó a kútra míg el nem törik
+Addig nyújtózkodj ameddig a takaród ér
+Adj a tótnak szállást kiver a házadból
+Ajándék lónak ne nézd a fogát
+Aki hibátlan lovat keres járhat gyalog
+Aki másnak vermet ás maga esik bele
+Az orvosokból lesz a legrosszabb beteg
+Átesett a ló tulsó oldalára
+Bolond likból bolond szél fúj
+Csalánba nem üt a mennykő
+Ebül szerzett jószág ebül vész el
+Egy bolond százat csinál
+Egyik tizenkilenc másik egy híján húsz
+Éhes disznó makkal álmodik
+Ha rövid a kardod toldd meg egy lépéssel
+Hallgatni arany
+Ha hallgattál volna bölcs maradtál volna
+Holló a hollónak nem vájja ki a szemét
+Járt utat a járatlanért el ne hagyj
+Jó bornak nem kell cégér
+Jó kezdet fél siker
+Jó munkához idő kell
+Jó pap holtig tanul
+Jó tett helyébe jót várj
+Jobb adni mint kapni
+Jobb félni mint megijedni
+Jobb ma egy veréb mint holnap egy túzok
+Jóból is megárt a sok
+Ki korán kel aranyat lel
+Ki mint vet úgy arat
+Kicsi a bors de erős
+Kinek a pap kinek a papné
+Kutyából nem lesz szalonna
+Kutyaharapást szőrével
+Ki mint veti ágyát úgy alussza álmát
+Láttam én már karón varjút
+Legjobb szakács az éhség
+A lónak négy lába van mégis megbotlik
+Madarat tolláról embert barátjáról
+Macskás fadísz
+Más kárán tanul az okos
+Nagyobb a füstje mint a lángja
+Nagy az Isten állatkertje
+Nem esik messze az alma a fájától
+Nem mind arany ami fénylik
+Okos enged szamár szenved
+Olcsó húsnak híg a leve
+Ökör iszik magában
+Pénz beszél kutya ugat
+Segíts magadon az Isten is megsegít
+Sok lúd disznót győz
+Sokat ígér de keveset ad.
+Sötétben minden tehén fekete
+Szegény embert még az ág is húzza
+Szemet szemért fogat fogért
+Szó elszáll írás megmarad
+Szükség törvényt bont
+Tanulj tinó ökör lesz belőled
+Több nap mint kolbász
+Többet ésszel mint erővel
+Tudja hol szorít a cipő
+Türelem rózsát terem
+Vak tyúk is talál szemet
+Vak vezet világtalant
+Vakok között félszemű a király
+Vén kecske is megnyalja a sót
+Vér vízzé nem válik
+Vizet hord a Dunába
+Vizet prédikál és bort iszik
+Jóllakott macska nem fog egeret
+Egy fecske nem csinál nyarat
+Ember embernek farkasa
+Két legyet üt egy csapásra
+A lovát keresi rajta ül
+Csapjunk a lovak közé
+Kilóg a lóláb
+Utánozás majomszokás
+Amikor a farok csóválja a kutyát
+Amilyen a mosdó olyan a törölköző
+Ha adnak fogadd el ha ütnek szaladj el
+Alkalom szüli a tolvajt
+Sok az eszkimó kevés a fóka
+Akit a kígyó megmart a gyíktól is fél
+Fejétől bűzlik a hal
+A nagy hal megeszi a kicsiket
+Róka fogta csuka csuka fogta róka
+A sas nem fog legyeket
+Ha ló nincs szamár is jó
+Ajándék lónak ne nézd a fogát
+Minden kakas úr a maga szemétdombján
+Holló fészkén hattyút keres
+Átesik a ló másik oldalára
+Nagy a feje búsuljon a ló
+Közös lónak túros a háta`
