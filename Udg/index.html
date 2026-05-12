@@ -1,0 +1,33 @@
+<html>
+<body>
+<script src="udg.js"></script>
+<script>
+pixel(4)
+ink("1","black")
+ink("2","#F00")
+create("0011100","A")
+create("0112110","A")
+create("1120211","A")
+create("1111111","A")
+create("1122211","A")
+create("1100011","A")
+create("2200022","A")
+create("1111110","B")
+create("1100011","B")
+create("1111110","B")
+create("1100211","B")
+create("1100011","B")
+create("1111110","B")
+
+x = 0
+function loop(){
+	cls("beige")
+	draw("A",x ,20)
+	draw("B",x+10 ,20)
+	x++
+	requestAnimationFrame(loop)
+}
+loop()
+</script>
+</body>
+</html>
